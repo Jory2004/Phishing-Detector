@@ -1,4 +1,4 @@
-Phishing Detection
+##Phishing Detection
 
 Project Overview:
 This project is an AI-powered Phishing Detector designed to help users safely navigate the web by identifying and avoiding malicious links and spam emails. The system leverages state-of-the-art machine learning techniques to analyze URLs and emails, detecting phishing attempts before they can cause harm.
