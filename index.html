@@ -1,640 +1,31 @@
 <!DOCTYPE html>
 <html lang="ar">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-key="guidelines_title">إرشادات الاستخدام</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Tajawal", sans-serif;
-      }
-      body {
-        font-family: "Tajawal", sans-serif;
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url("bg1.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
-        background-size: cover;
-        direction: inherit;
-        color: #333;
-      }
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        min-height: 100vh;
-        padding: 80px 20px 40px;
-      }
+<head>
+    <meta charset="UTF-8">
+    <title>فحص الروابط - كاشف التصيد</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body dir="rtl" class="bg-light">
 
-      .guidelines-box {
-        background: linear-gradient(to right, #3b3b4f, #6b6985);
-        padding: 40px;
-        border-radius: 12px;
-        width: 100%;
-        max-width: 850px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-        color: #ffffff;
-      }
-
-      .guidelines-box h1 {
-        font-size: 28px;
-        margin-bottom: 25px;
-        text-align: center;
-        color: #0dcaf0;
-        font-weight: bold;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-        padding-bottom: 10px;
-      }
-
-      .guidelines-box h2,
-      .guidelines-box h3 {
-        font-size: 22px;
-        margin: 30px 0 15px;
-        color: #ffffff;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 6px;
-      }
-
-      .guidelines-box p,
-      .guidelines-box li {
-        font-size: 16px;
-        line-height: 1.8;
-        margin-bottom: 12px;
-        color: #f0f0f0;
-      }
-
-      .guidelines-box ul,
-      .guidelines-box ol {
-        padding-right: 20px;
-        margin-bottom: 20px;
-      }
-
-      .result-example {
-        background: rgba(255, 255, 255, 0.1);
-        border-left: 5px solid #0dcaf0;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 20px 0;
-        color: #ffffff;
-        transition: 0.3s;
-      }
-      .result-example:hover{
-        background: rgba(255, 255, 255, 0.15);
-        border-left: 5px solid #0dcaf0;
-        transform: scale(1.02);
-        transition:  0.3s ease, border-left 0.3s ease
-      }
-      .safe {
-        color: #4caf50;
-      }
-      .warning {
-        color: #ffc107;
-      }
-      .danger {
-        color: #ff4d4d;
-      }
-      .high-danger {
-        color: #ff0033;
-      }
-
-      .tips-box {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 20px;
-        border-radius: 10px;
-        margin-top: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: #f8f8f8;
-      }
-    .tips-box ul li {
-        position: relative;
-        padding-right: 40px; 
-        list-style: none;
-      }
-
-      .tips-box ul li::before {
-        content: "";
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background-image: url('shield_12795769.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-         filter: brightness(0) invert(1);
-      }
-
-      .navbar {
-        background-color: rgba(0, 0, 0, 0.8) !important;
-      }
-
-      .nav-link {
-        color: white !important;
-        font-weight: bold !important;
-      }
-
-      .nav-link:hover,
-      .nav-link.active {
-        color: #0dcaf0 !important;
-      }
-      .active {
-        color: #0dcaf0 !important;
-      }
-    </style>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-3">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img src="logo.png" alt="Logo" width="60" height="40"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html" data-key="nav_home"
-                >الرئيسية</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="url_check.html" data-key="nav_url"
-                >فحص الروابط</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="email.html" data-key="nav_email"
-                >فحص البريد الإلكتروني</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html" data-key="nav_about"
-                >معلومات</a
-              >
-            </li>
-          </ul>
-          <div class="d-flex align-items-center gap-2">
-            <select
-              id="languageSelect"
-              class="form-select form-select-sm bg-dark text-white border-light"
-            >
-              <option value="ar" selected>العربية</option>
-              <option value="en">English</option>
-            </select>
-          </div>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">🔍 كاشف الروابط الاحتيالية</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="url" class="form-label">أدخل الرابط:</label>
+            <input type="text" class="form-control" id="url" name="url" placeholder="مثال: http://example.com">
         </div>
-      </div>
-    </nav>
+        <button type="submit" class="btn btn-primary">فحص الرابط</button>
+    </form>
 
-    <div class="container">
-      <div class="guidelines-box">
-        <h1
-          data-key="guidelines_title"
-          data-description="العنوان الرئيسي لصفحة الإرشادات"
-        >
-          إرشادات الاستخدام
-        </h1>
-
-        <h2 data-key="guidelines_intro_title">مقدمة</h2>
-        <p data-key="guidelines_intro_text">
-          مرحباً بك في أداة كشف التصيد الإلكتروني. هذه الأداة مصممة لمساعدتك في
-          تحديد ما إذا كان رابط أو بريد إلكتروني مشبوهاً أو يحتوي على محاولة
-          تصيد. اتبع الإرشادات أدناه للحصول على أفضل النتائج.
-        </p>
-
-        <h2 data-key="url_check_title">فحص الروابط</h2>
-        <p data-key="url_check_text">
-          استخدم هذه الأداة للتحقق من أمان الروابط قبل النقر عليها أو مشاركتها.
-        </p>
-        <ol data-key="url_check_steps">
-          <li>انتقل إلى صفحة "فحص الروابط" من القائمة الرئيسية.</li>
-          <li>الصق الرابط الذي تريد فحصه في مربع النص.</li>
-          <li>انقر على زر "فحص الرابط" وانتظر حتى تكتمل عملية الفحص.</li>
-          <li>اقرأ النتيجة وتصرف بناءً عليها.</li>
-        </ol>
-
-        <h3
-          data-description="فهم نتائج فحص الروابط"
-          data-key="url_results_title"
-        >
-          فهم نتائج فحص الروابط
-        </h3>
-
-        <div
-          data-description="الرابط آمن! نسبة الأمان: 98.50% هذا يعني أن الرابط آمن ويمكنك الوثوق به. لم يتم اكتشاف أية مخاطر."
-          class="result-example"
-        >
-          <p>
-            <span class="safe" data-key="url_result_safe"
-              >✅ الرابط آمن! نسبة الأمان: 98.50%</span
-            >
-          </p>
-          <p data-key="url_result_safe_desc">
-            هذا يعني أن الرابط آمن ويمكنك الوثوق به. لم يتم اكتشاف أية مخاطر.
-          </p>
-        </div>
-
-        <div
-          data-description="الرابط مشبوه! نسبة الأمان: 92.30% هذا يعني أن هناك بعض العلامات المشبوهة في الرابط. توخى الحذر قبل النقر عليه أو مشاركته."
-          class="result-example"
-        >
-          <p>
-            <span class="warning" data-key="url_result_warning"
-              >⚠️ الرابط مشبوه! نسبة الأمان: 92.30%</span
-            >
-          </p>
-          <p data-key="url_result_warning_desc">
-            هذا يعني أن هناك بعض العلامات المشبوهة في الرابط. توخى الحذر قبل
-            النقر عليه أو مشاركته.
-          </p>
-        </div>
-
-        <div
-          data-description="الرابط غير آمن! نسبة الأمان: 75.50% هذا يعني أن الرابط يُعتبر ضاراً من قبل العديد من محركات الأمان. تجنب النقر عليه أو مشاركته."
-          class="result-example"
-        >
-          <p>
-            <span class="danger" data-key="url_result_danger"
-              >⚠️ الرابط غير آمن! نسبة الأمان: 75.50%</span
-            >
-          </p>
-          <p data-key="url_result_danger_desc">
-            هذا يعني أن الرابط يُعتبر ضاراً من قبل العديد من محركات الأمان. تجنب
-            النقر عليه أو مشاركته.
-          </p>
-        </div>
-
-        <h2
-          data-description="فحص البريد الإلكتروني"
-          data-key="email_check_title"
-        >
-          فحص البريد الإلكتروني
-        </h2>
-
-        <p
-          data-description="استخدم هذه الأداة للتحقق من محتوى البريد الإلكتروني للكشف عن محاولات التصيد أو الاحتيال."
-          data-key="email_check_text"
-        >
-          استخدم هذه الأداة للتحقق من محتوى البريد الإلكتروني للكشف عن محاولات
-          التصيد أو الاحتيال.
-        </p>
-
-        <ol
-          data-key="email_check_steps"
-          data-description="قائمة خطوات فحص محتوى البريد الإلكتروني"
-        >
-          <li
-            data-description="الدخول إلى صفحة فحص البريد الإلكتروني من القائمة الرئيسية"
-          >
-            انتقل إلى صفحة "فحص البريد الإلكتروني" من القائمة الرئيسية.
-          </li>
-          <li
-            data-description="إدخال محتوى البريد الإلكتروني المشبوه في مربع النص"
-          >
-            الصق محتوى البريد الإلكتروني المشبوه في مربع النص.
-          </li>
-          <li
-            data-description="الضغط على زر فحص البريد الإلكتروني وانتظار النتيجة"
-          >
-            انقر على زر "فحص البريد" وانتظر حتى تكتمل عملية الفحص.
-          </li>
-          <li data-description="قراءة نتيجة الفحص والتفسير المتعلق بها">
-            اقرأ النتيجة والتفسير المرتبط بها.
-          </li>
-        </ol>
-
-        <h3
-          data-description="فهم نتائج فحص البريد الإلكتروني"
-          data-key="email_results_title"
-        >
-          فهم نتائج فحص البريد الإلكتروني
-        </h3>
-        <div class="result-example">
-          <p>
-            <span
-              data-description="البريد الإلكتروني آمن! درجة الخطر: 2.10/10"
-              class="safe"
-              data-key="email_result_safe"
-              >✅ البريد الإلكتروني آمن! درجة الخطر: 2.10/10</span
-            >
-          </p>
-          <p
-            data-description="هذا يعني أن البريد الإلكتروني لا يحتوي على مؤشرات للاحتيال أو التصيد."
-            data-key="email_result_safe_desc"
-          >
-            هذا يعني أن البريد الإلكتروني لا يحتوي على مؤشرات للاحتيال أو
-            التصيد.
-          </p>
-        </div>
-
-        <div class="result-example">
-          <p>
-            <span
-              data-description="البريد الإلكتروني قد يكون مشبوه! درجة الخطر: 4.50/10"
-              class="warning"
-              data-key="email_result_warning"
-              >⚠️ البريد الإلكتروني قد يكون مشبوه! درجة الخطر: 4.50/10</span
-            >
-          </p>
-          <p
-            data-description="هذا يعني أن هناك بعض المؤشرات المشبوهة في البريد الإلكتروني. توخى الحذر عند التعامل معه."
-            data-key="email_result_warning_desc"
-          >
-            هذا يعني أن هناك بعض المؤشرات المشبوهة في البريد الإلكتروني. توخى
-            الحذر عند التعامل معه.
-          </p>
-        </div>
-
-        <div class="result-example">
-          <p>
-            <span
-              data-description="البريد الإلكتروني مشبوه! درجة الخطر: 6.20/10"
-              class="danger"
-              data-key="email_result_danger"
-              >⚠️ البريد الإلكتروني مشبوه! درجة الخطر: 6.20/10</span
-            >
-          </p>
-          <p
-            data-description="هذا يعني أن البريد الإلكتروني يحتوي على مؤشرات قوية للاحتيال أو التصيد. تجنب النقر على الروابط أو فتح المرفقات."
-            data-key="email_result_danger_desc"
-          >
-            هذا يعني أن البريد الإلكتروني يحتوي على مؤشرات قوية للاحتيال أو
-            التصيد. تجنب النقر على الروابط أو فتح المرفقات.
-          </p>
-        </div>
-
-        <div class="result-example">
-          <p>
-            <span
-              data-description="البريد الإلكتروني خطير جداً! درجة الخطر: 8.70/10"
-              class="high-danger"
-              data-key="email_result_high_danger"
-              >⚠️ البريد الإلكتروني خطير جداً! درجة الخطر: 8.70/10</span
-            >
-          </p>
-          <p
-            data-description="هذا يعني أن البريد الإلكتروني خطير للغاية وهو محاولة تصيد. لا تتفاعل معه نهائياً وقم بإبلاغ مزود البريد الإلكتروني الخاص بك."
-            data-key="email_result_high_danger_desc"
-          >
-            هذا يعني أن البريد الإلكتروني خطير للغاية وهو محاولة تصيد. لا تتفاعل
-            معه نهائياً وقم بإبلاغ مزود البريد الإلكتروني الخاص بك.
-          </p>
-        </div>
-
-        <div class="tips-box">
-          <h2
-            data-description="نصائح عامة للأمان الإلكتروني"
-            data-key="safety_tips_title"
-          >
-            نصائح عامة للأمان الإلكتروني
-          </h2>
-          <ul
-            data-key="safety_tips_list"
-            data-description="قائمة نصائح عامة للأمان الإلكتروني"
-          >
-            <li data-description="تجنب النقر على الروابط من مصادر غير موثوقة">
-              لا تنقر أبداً على روابط من مصادر غير معروفة.
-            </li>
-            <li data-description="التحقق من عنوان URL لتفادي المواقع المزيفة">
-              تحقق دائماً من عنوان URL بعناية قبل إدخال أي معلومات شخصية أو
-              حساسة.
-            </li>
-            <li data-description="الحذر من الرسائل التي تطلب معلومات خاصة">
-              توخ الحذر من رسائل البريد الإلكتروني التي تطلب معلومات شخصية أو
-              مالية.
-            </li>
-            <li data-description="الانتباه للأخطاء التي قد تشير إلى احتيال">
-              ابحث عن علامات التحذير مثل الأخطاء الإملائية أو النحوية أو شعارات
-              الشركات غير الدقيقة.
-            </li>
-            <li data-description="عدم فتح المرفقات من مرسلين غير معروفين">
-              لا تفتح مرفقات البريد الإلكتروني من مرسلين غير معروفين.
-            </li>
-            <li
-              data-description="كن حذراً من العروض الخادعة التي تبدو مغرية جداً"
-            >
-              إذا كان البريد الإلكتروني يحتوي على عرض يبدو جيداً جداً لدرجة يصعب
-              تصديقها، فمن المحتمل أنه كذلك.
-            </li>
-            <li
-              data-description="التحقق من النطاق الرئيسي للمواقع لتفادي الاحتيال"
-            >
-              تحقق من النطاق الرئيسي للروابط وليس فقط الأسماء الفرعية.
-            </li>
-          </ul>
-        </div>
-      </div>
+    {% if result %}
+    <div class="alert mt-4 {% if 'آمن' in result %}alert-success{% else %}alert-danger{% endif %}">
+        <h5>{{ result }}</h5>
+        {% if probability %}
+        <p>🔐 نسبة الأمان: {{ probability }}%</p>
+        {% endif %}
     </div>
+    {% endif %}
+</div>
 
-    <script src="auth.js"></script>
-
-    <script>
-      // This function is assumed to be defined in auth.js to update the login/auth button
-      updateAuthButton();
-
-      // Translation dictionary with keys for both Arabic (ar) and English (en)
-      const translations = {
-        ar: {
-          nav_home: "الرئيسية",
-          nav_url: "فحص الروابط",
-          nav_email: "فحص البريد الإلكتروني",
-          nav_about: "معلومات",
-          nav_contact: "اتصل بنا",
-          nav_login: "تسجيل دخول",
-          guidelines_title: "إرشادات الاستخدام",
-          guidelines_intro_title: "مقدمة",
-          guidelines_intro_text:
-            "مرحباً بك في أداة كشف التصيد الإلكتروني. هذه الأداة مصممة لمساعدتك في تحديد ما إذا كان رابط أو بريد إلكتروني مشبوهاً أو يحتوي على محاولة تصيد. اتبع الإرشادات أدناه للحصول على أفضل النتائج.",
-          url_check_title: "فحص الروابط",
-          url_check_text:
-            "استخدم هذه الأداة للتحقق من أمان الروابط قبل النقر عليها أو مشاركتها.",
-          url_check_steps: [
-            'انتقل إلى صفحة "فحص الروابط" من القائمة الرئيسية.',
-            "الصق الرابط الذي تريد فحصه في مربع النص.",
-            'انقر على زر "فحص الرابط" وانتظر حتى تكتمل عملية الفحص.',
-            "اقرأ النتيجة وتصرف بناءً عليها.",
-          ],
-          url_results_title: "فهم نتائج فحص الروابط",
-          url_result_safe: "✅ الرابط آمن! نسبة الأمان: 98.50%",
-          url_result_safe_desc:
-            "هذا يعني أن الرابط آمن ويمكنك الوثوق به. لم يتم اكتشاف أية مخاطر.",
-          url_result_warning: "⚠️ الرابط مشبوه! نسبة الأمان: 92.30%",
-          url_result_warning_desc:
-            "هذا يعني أن هناك بعض العلامات المشبوهة في الرابط. توخى الحذر قبل النقر عليه أو مشاركته.",
-          url_result_danger: "⚠️ الرابط غير آمن! نسبة الأمان: 75.50%",
-          url_result_danger_desc:
-            "هذا يعني أن الرابط يُعتبر ضاراً من قبل العديد من محركات الأمان. تجنب النقر عليه أو مشاركته.",
-          email_check_title: "فحص البريد الإلكتروني",
-          email_check_text:
-            "استخدم هذه الأداة للتحقق من محتوى البريد الإلكتروني للكشف عن محاولات التصيد أو الاحتيال.",
-          email_check_steps: [
-            'انتقل إلى صفحة "فحص البريد الإلكتروني" من القائمة الرئيسية.',
-            "الصق محتوى البريد الإلكتروني المشبوه في مربع النص.",
-            'انقر على زر "فحص البريد" وانتظر حتى تكتمل عملية الفحص.',
-            "اقرأ النتيجة والتفسير المرتبط بها.",
-          ],
-          email_results_title: "فهم نتائج فحص البريد الإلكتروني",
-          email_result_safe: "✅ البريد الإلكتروني آمن! درجة الخطر: 2.10/10",
-          email_result_safe_desc:
-            "هذا يعني أن البريد الإلكتروني لا يحتوي على مؤشرات للاحتيال أو التصيد.",
-          email_result_warning:
-            "⚠️ البريد الإلكتروني قد يكون مشبوه! درجة الخطر: 4.50/10",
-          email_result_warning_desc:
-            "هذا يعني أن هناك بعض المؤشرات المشبوهة في البريد الإلكتروني. توخى الحذر عند التعامل معه.",
-          email_result_danger:
-            "⚠️ البريد الإلكتروني مشبوه! درجة الخطر: 6.20/10",
-          email_result_danger_desc:
-            "هذا يعني أن البريد الإلكتروني يحتوي على مؤشرات قوية للاحتيال أو التصيد. تجنب النقر على الروابط أو فتح المرفقات.",
-          email_result_high_danger:
-            "⚠️ البريد الإلكتروني خطير جداً! درجة الخطر: 8.70/10",
-          email_result_high_danger_desc:
-            "هذا يعني أن البريد الإلكتروني خطير للغاية وهو محاولة تصيد. لا تتفاعل معه نهائياً وقم بإبلاغ مزود البريد الإلكتروني الخاص بك.",
-          safety_tips_title: "نصائح عامة للأمان الإلكتروني",
-          safety_tips_list: [
-            "لا تنقر أبداً على روابط من مصادر غير معروفة.",
-            "تحقق دائماً من عنوان URL بعناية قبل إدخال أي معلومات شخصية أو حساسة.",
-            "توخ الحذر من رسائل البريد الإلكتروني التي تطلب معلومات شخصية أو مالية.",
-            "ابحث عن علامات التحذير مثل الأخطاء الإملائية أو النحوية أو شعارات الشركات غير الدقيقة.",
-            "لا تفتح مرفقات البريد الإلكتروني من مرسلين غير معروفين.",
-            "إذا كان البريد الإلكتروني يحتوي على عرض يبدو جيداً جداً لدرجة يصعب تصديقها، فمن المحتمل أنه كذلك.",
-            "تحقق من النطاق الرئيسي للروابط وليس فقط الأسماء الفرعية.",
-          ],
-          back_to_home: "العودة إلى الصفحة الرئيسية",
-        },
-        en: {
-          nav_home: "Home",
-          nav_url: "URL Checker",
-          nav_email: "Email Checker",
-          nav_about: "About",
-          nav_contact: "Contact",
-          nav_login: "Login",
-          guidelines_title: "User Guidelines",
-          guidelines_intro_title: "Introduction",
-          guidelines_intro_text:
-            "Welcome to the Phishing detector tool. This tool is designed to help you determine if a link or email is suspicious or contains a phishing attempt. Follow the guidelines below for best results.",
-          url_check_title: "URL Checking",
-          url_check_text:
-            "Use this tool to verify the safety of links before clicking or sharing them.",
-          url_check_steps: [
-            "Navigate to the 'URL Checker' page from the main menu.",
-            "Paste the link you want to check in the text box.",
-            "Click on the 'Check URL' button and wait for the check to complete.",
-            "Read the result and act accordingly.",
-          ],
-          url_results_title: "Understanding URL Check Results",
-          url_result_safe: "✅ URL is safe! Safety percentage: 98.50%",
-          url_result_safe_desc:
-            "This means the URL is safe and can be trusted. No risks were detected.",
-          url_result_warning: "⚠️ URL is suspicious! Safety percentage: 92.30%",
-          url_result_warning_desc:
-            "This means there are some suspicious indicators in the URL. Exercise caution before clicking or sharing.",
-          url_result_danger: "⚠️ URL is unsafe! Safety percentage: 75.50%",
-          url_result_danger_desc:
-            "This means the URL is considered harmful by several security engines. Avoid clicking or sharing it.",
-          email_check_title: "Email Checking",
-          email_check_text:
-            "Use this tool to check email content for phishing or scam attempts.",
-          email_check_steps: [
-            "Navigate to the 'Email Checker' page from the main menu.",
-            "Paste the suspicious email content into the text box.",
-            "Click on the 'Check Email' button and wait for the check to complete.",
-            "Read the result and the associated explanation.",
-          ],
-          email_results_title: "Understanding Email Check Results",
-          email_result_safe: "✅ Email is safe! Risk score: 2.10/10",
-          email_result_safe_desc:
-            "This means the email does not contain indicators of fraud or phishing.",
-          email_result_warning:
-            "⚠️ Email may be suspicious! Risk score: 4.50/10",
-          email_result_warning_desc:
-            "This means there are some suspicious indicators in the email. Exercise caution when dealing with it.",
-          email_result_danger: "⚠️ Email is suspicious! Risk score: 6.20/10",
-          email_result_danger_desc:
-            "This means the email contains strong indicators of fraud or phishing. Avoid clicking on links or opening attachments.",
-          email_result_high_danger:
-            "⚠️ Email is highly dangerous! Risk score: 8.70/10",
-          email_result_high_danger_desc:
-            "This means the email is extremely dangerous and is a phishing attempt. Do not interact with it at all and report it to your email provider.",
-          safety_tips_title: "General Cybersecurity Tips",
-          safety_tips_list: [
-            "Never click on links from unknown sources.",
-            "Always check the URL carefully before entering any personal or sensitive information.",
-            "Be cautious of emails requesting personal or financial information.",
-            "Look for warning signs such as spelling or grammatical errors or inaccurate company logos.",
-            "Do not open email attachments from unknown senders.",
-            "If an email contains an offer that seems too good to be true, it probably is.",
-            "Check the main domain of links, not just the subdomains.",
-          ],
-          back_to_home: "Back to Home Page",
-        },
-      };
-
-      // Function to update text based on the selected language
-      function updateTranslations(lang) {
-        document.querySelectorAll("[data-key]").forEach((el) => {
-          const key = el.getAttribute("data-key");
-          if (translations[lang] && translations[lang][key]) {
-            // Handle list items separately
-            if (Array.isArray(translations[lang][key])) {
-              // Clear existing list items
-              el.innerHTML = "";
-              // Create new list items based on the translations
-              translations[lang][key].forEach((item) => {
-                const li = document.createElement("li");
-                li.textContent = item;
-                el.appendChild(li);
-              });
-            } else {
-              // If the element is an input with a placeholder attribute, update it
-              if (el.placeholder !== undefined && el.placeholder !== "") {
-                el.placeholder = translations[lang][key];
-              } else {
-                el.textContent = translations[lang][key];
-              }
-            }
-          }
-        });
-        // Update the HTML language and text direction attributes
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
-      }
-
-      // Listen for changes on the language selector
-      document
-        .getElementById("languageSelect")
-        .addEventListener("change", function () {
-          updateTranslations(this.value);
-        });
-
-      // Initialize with the default language (Arabic)
-      updateTranslations(document.getElementById("languageSelect").value);
-    </script>
-
-    <!-- <script type="module" src="hover_audio.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
