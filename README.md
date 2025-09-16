@@ -11,7 +11,8 @@ This project is an AI-powered Phishing Detector designed to help users safely na
 - **Cross-Platform Compatibility**: Works on any modern browser with full right-to-left support for Arabic users.  
 
 ## 🚀 Live Demo  
-Try the project directly here and experience AI-powered phishing and spam detection in action.  
+Try the project directly here and experience AI-powered phishing and spam detection in action:  
+[Live Demo — Phishing Hunter](https://phishing-hunter-jr.netlify.app)
 
 ## 👩‍💻 Developed by  
 Reema Alomari & Jory Alhumidany  
