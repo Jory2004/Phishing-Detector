@@ -5,9 +5,13 @@ This project is an AI-powered Phishing Detector designed to help users safely na
 
 Key Highlights:
 	•	Real-time URL & Email Analysis: Instantly evaluates URLs and email addresses, providing immediate feedback on their safety.
+ 
 	•	Advanced AI Techniques: Uses TF-IDF feature extraction and machine learning to classify inputs accurately and reliably.
+ 
 	•	Intuitive Web Interface: A clean, user-friendly interface makes phishing detection accessible to everyone.
+ 
 	•	Practical Impact: Helps prevent data breaches, identity theft, and financial loss by warning users about potentially dangerous websites and spam emails.
+ 
 	•	Cross-Platform Compatibility: Works on any modern browser with full right-to-left support for Arabic users.
 
 🚀 Live Demo:
